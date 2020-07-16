@@ -12,10 +12,19 @@ public class Record implements Serializable {
     //variables
     //might add an id
     private int RecordId;
+    private String Heading;
     private String FileURI;
     private Date dateTime;
     private String Description;
     public Record() {
+    }
+
+    public void setHeading(String heading){
+        Heading = heading;
+    }
+
+    public String getHeading() {
+        return Heading;
     }
 
     public String getDescription() {

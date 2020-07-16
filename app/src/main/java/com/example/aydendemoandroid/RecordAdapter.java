@@ -32,10 +32,10 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordHolder> {
     public void onBindViewHolder(@NonNull RecordHolder holder, int position) {
         SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = arrayList.get(position).getDateTime();
+        String heading = arrayList.get(position).getHeading();
 
         holder.DateTime.setText(df.format(date));
-        final int id = arrayList.get(position).getRecordId();
-        holder.RecordID.setText(Integer.toString(id));
+        holder.Heading.setText(heading);
         //setting image
         holder.Picture.setImageURI(Uri.parse(arrayList.get(position).getFileURI()));
 

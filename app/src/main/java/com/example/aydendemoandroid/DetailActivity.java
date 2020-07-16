@@ -17,6 +17,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     ImageView image;
     Button delete;
     TextView text;
+    TextView Heading;
     TextView date;
     int recordID;
     RecordKeeper Recordlist = null;
@@ -31,7 +32,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         recordID = id;
         Record temp = Recordlist.getRecord(id);
         image.setImageURI(Uri.parse(temp.getFileURI()));
-        text = findViewById(R.id.DetailsInput);
+        Heading = findViewById(R.id.ViewHeading);
+        Heading.setText(temp.getHeading());
+        Heading.setTextSize(30);
+        text = findViewById(R.id.DescriptionID);
         text.setText(temp.getDescription());
         delete = findViewById(R.id.DeleteButton);
         delete.setOnClickListener(this);
