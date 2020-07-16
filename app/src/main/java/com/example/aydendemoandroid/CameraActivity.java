@@ -89,7 +89,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
          capturebtn = findViewById(R.id.CaptureBTN);
          capturebtn.setOnClickListener(this);
         ConstraintLayout mainLayout = (ConstraintLayout)findViewById(R.id.cameraPreview);
-        mainLayout.setBackgroundColor(Color.RED);
         openCamera();
         //need to set the event listener for the buttons.
 
