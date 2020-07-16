@@ -31,6 +31,16 @@ public class RecordKeeper implements Serializable {
         }
         return null;//if there are no records found.
     }
+    //deletes the record with that record id.
+    public void deleteRecord(int id ) {
+        Iterator<Record> listIterator = recordlist.iterator();
+        while (listIterator.hasNext()) {
+            Record temp = listIterator.next();
+            if (temp.getRecordId() == id) {
+                listIterator.remove();
+            }
+        }
+    }
     public ArrayList<Record> toArrayList(){
         return new ArrayList<Record>(recordlist);
     }

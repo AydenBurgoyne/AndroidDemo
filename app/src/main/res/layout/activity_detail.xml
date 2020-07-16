@@ -41,4 +41,12 @@
         android:layout_marginTop="340dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/DeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="506dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
